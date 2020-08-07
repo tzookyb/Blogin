@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/5720fb0946.css">
+
+    <title>Blogin</title>
+
+</head>
+
+<body>
+    <div onclick="toggleMenu()" class="modal"></div>
+
+        <div class="container">
+
+            <header class="flex justify-center">
+                <div class="header-container flex space-between align-center">
+                    <div class="logo">
+                        <img src="img/Blogin.png" alt="Blogin">
+                    </div>
+                    <nav class="flex">
+                        <div onclick="toggleMenu()" class="navbar-btn selected">Journal</div>
+                        <div onclick="toggleMenu()" class="navbar-btn">About</div>
+                        <div onclick="toggleMenu()" class="navbar-btn">Work</div>
+                        <div onclick="toggleMenu()" class="navbar-btn">Contact</div>
+                    </nav>
+                    <div class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
+                </div>
+            </header>
+
+            <main>
+
+                <div class="card-container flex">
+                    <div class="card"><img src="img/Layer_2.jpg" alt=""></div>
+                    <div class="card">
+                        <H2 class="card-title">Duis aute irure dolor in
+                            henderit in voluptate.</H2>
+                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip
+                            ex ea commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...</p>
+                        <button class="card-button">Continue Reading</button>
+                    </div>
+                </div>
+
+                <div class="card-container flex">
+                    <div class="card"><img src="img/Layer_3.jpg" alt=""></div>
+                    <div class="card flex column space-between">
+                        <H2 class="card-title">Duis aute irure dolor in
+                            henderit in voluptate.</H2>
+                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...</p>
+                        <button class="card-button">Continue Reading</button>
+                    </div>
+                </div>
+
+                <div class="card-container flex">
+                    <div class="card"><img src="img/Layer_4.jpg" alt=""></div>
+                    <div class="card flex column space-between">
+                        <H2 class="card-title">Duis aute irure dolor in
+                            henderit in voluptate.</H2>
+                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commo
+                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur...</p>
+                        <button class="card-button">Continue Reading</button>
+                    </div>
+                </div>
+
+                <div class="scroll flex space-between">
+                    <button class="scroll-btn">⬅ Previous</button>
+                    <button class="scroll-btn">Next ➡</button>
+                </div>
+        </div>
+        </main>
+
+        <footer class="flex justify-center">
+            <div class="footer-container flex column align-center">
+
+                <img class="footer-logo" src="img/Blogin-footer.png" alt="Blogin">
+                <p class="footernote">&copy 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+                    <span>Pixelhint.com</span></p>
+                <div class="flex space-between">
+                    <div class="soc-icons facebook"><i class="fa fa-facebook-f"></i></div>
+                    <div class="soc-icons twitter"><i class="fa fa-twitter"></i></div>
+                    <div class="soc-icons behance"><i class="fa fa-behance"></i></div>
+                    <div class="soc-icons dribble"><i class="fa fa-dribbble"></i></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+    </script>
+</body>
+
+</html>

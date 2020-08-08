@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    transition: 0.5s;
 }
 
 @font-face {
@@ -26,6 +25,80 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     visibility: hidden;
+}
+
+.read-more-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.read-more {
+    position: relative;
+    background-color: #fff;
+    padding: 50px;
+    font-family: Lato;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    border: 2px solid #c2c2c2;
+    background-color: #ffffff;
+    color: #c2c1c1;
+    font-family: Lato;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.close:hover {
+    border: #58c93a solid 2px;
+    color: #58c93a;
+}
+
+.read-more input {
+    width: 20rem;
+    border: 2px solid #58c93a;
+    background-color: #ffffff;
+    color: #c2c1c1;
+    font-family: Lato;
+    color: #58c93a;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 20px;
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+.read-more-visible {
+    visibility: visible;
+}
+
+.subscribe:hover {
+    border: #58c93a solid 2px;
+    color: #58c93a;
+}
+
+.subscribe {
+    cursor: pointer;
+    align-self: flex-end;
+    border: 2px solid #c2c2c2;
+    background-color: #ffffff;
+    color: #c2c1c1;
+    font-family: Lato;
+    font-weight: 700;
+    border-radius: 20px;
 }
 
 .menu-btn {
@@ -73,6 +146,28 @@ nav {
 
 .selected {
     border-bottom: #58c93a solid 6px;
+}
+
+.dropdown {
+    visibility: hidden;
+    position: absolute;
+    width: 131px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transform: translateY(119px);
+}
+
+.dropdown-container:hover .dropdown {
+    visibility: visible;
+}
+
+.dropdown a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #292929;
+    margin: 5px 5px;
 }
 
 main {
@@ -230,6 +325,14 @@ footer {
 
 /* HELPERS */
 
+.relative {
+    position: relative;
+}
+
+.no-focus:focus {
+    outline: none;
+}
+
 .flex {
     display: flex;
 }
@@ -255,6 +358,10 @@ footer {
 }
 
 @media only screen and (max-width: 1040px) {
+    .dropdown{
+        transform: translateY(93px);
+    }
+
     header {
         height: 80px;
     }
@@ -319,6 +426,12 @@ footer {
     }
     body.menu-open .modal {
         visibility: visible;
+    }
+    .read-more {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
 

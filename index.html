@@ -15,95 +15,117 @@
 <body>
     <div onclick="toggleMenu()" class="modal"></div>
 
-        <div class="container">
-
-            <header class="flex justify-center">
-                <div class="header-container flex space-between align-center">
-                    <div class="logo">
-                        <img src="img/Blogin.png" alt="Blogin">
-                    </div>
-                    <nav class="flex">
-                        <div onclick="toggleMenu()" class="navbar-btn selected">Journal</div>
-                        <div onclick="toggleMenu()" class="navbar-btn">About</div>
-                        <div onclick="toggleMenu()" class="navbar-btn">Work</div>
-                        <div onclick="toggleMenu()" class="navbar-btn">Contact</div>
-                    </nav>
-                    <div class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
-                </div>
-            </header>
-
-            <main>
-
-                <div class="card-container flex">
-                    <div class="card"><img src="img/Layer_2.jpg" alt=""></div>
-                    <div class="card">
-                        <H2 class="card-title">Duis aute irure dolor in
-                            henderit in voluptate.</H2>
-                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip
-                            ex ea commo
-                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                        <button class="card-button">Continue Reading</button>
-                    </div>
-                </div>
-
-                <div class="card-container flex">
-                    <div class="card"><img src="img/Layer_3.jpg" alt=""></div>
-                    <div class="card flex column space-between">
-                        <H2 class="card-title">Duis aute irure dolor in
-                            henderit in voluptate.</H2>
-                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commo
-                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                        <button class="card-button">Continue Reading</button>
-                    </div>
-                </div>
-
-                <div class="card-container flex">
-                    <div class="card"><img src="img/Layer_4.jpg" alt=""></div>
-                    <div class="card flex column space-between">
-                        <H2 class="card-title">Duis aute irure dolor in
-                            henderit in voluptate.</H2>
-                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commo
-                            doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur...</p>
-                        <button class="card-button">Continue Reading</button>
-                    </div>
-                </div>
-
-                <div class="scroll flex space-between">
-                    <button class="scroll-btn">⬅ Previous</button>
-                    <button class="scroll-btn">Next ➡</button>
-                </div>
+    <div class="read-more-modal read-more-hidden">
+        <div class="read-more">
+            <button onclick="toggleModal()" class="close no-focus">&times</button>
+            <h2>Join us to get access to the latest stories!</h2>
+            <label for="email">Enter your email address:</label><br />
+            <input class="no-focus" type="email" name="email" id="email">
+            <button onclick="toggleModal()" class="subscribe no-focus">Subscribe</button>
         </div>
-        </main>
+    </div>
+    <div class="container">
 
-        <footer class="flex justify-center">
-            <div class="footer-container flex column align-center">
+        <header class="flex justify-center">
+            <div class="header-container flex space-between align-center">
+                <div class="logo">
+                    <img src="img/Blogin.png" alt="Blogin">
+                </div>
+                <nav class="flex">
+                    <div onclick="toggleDropDown()" class="navbar-btn selected relative dropdown-container">Journal
+                        <div class="dropdown">
+                            <a onclick="toggleMenu()" href="">October 2016</a>
+                            <a onclick="toggleMenu()" href="">January 2017</a>
+                            <a onclick="toggleMenu()" href="">April 2017</a>
+                            <a onclick="toggleMenu()" href="">July 2017</a>
+                        </div>
+                    </div>
+                    <div onclick="toggleMenu()" class="navbar-btn">About</div>
+                    <div onclick="toggleMenu()" class="navbar-btn">Work</div>
+                    <div onclick="toggleMenu()" class="navbar-btn">Contact</div>
+                </nav>
+                <div class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
+            </div>
+        </header>
 
-                <img class="footer-logo" src="img/Blogin-footer.png" alt="Blogin">
-                <p class="footernote">&copy 2014 Blogin.com - All Rights Reserved - Find more free Templates at
-                    <span>Pixelhint.com</span></p>
-                <div class="flex space-between">
-                    <div class="soc-icons facebook"><i class="fa fa-facebook-f"></i></div>
-                    <div class="soc-icons twitter"><i class="fa fa-twitter"></i></div>
-                    <div class="soc-icons behance"><i class="fa fa-behance"></i></div>
-                    <div class="soc-icons dribble"><i class="fa fa-dribbble"></i></div>
+        <main>
+
+            <div class="card-container flex">
+                <div class="card"><img src="img/Layer_2.jpg" alt=""></div>
+                <div class="card">
+                    <H2 class="card-title">Duis aute irure dolor in
+                        henderit in voluptate.</H2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...</p>
+                    <button onclick="toggleModal()" class="card-button no-focus">Continue Reading</button>
                 </div>
             </div>
-        </footer>
+
+            <div class="card-container flex">
+                <div class="card"><img src="img/Layer_3.jpg" alt=""></div>
+                <div class="card flex column space-between">
+                    <H2 class="card-title">Duis aute irure dolor in
+                        henderit in voluptate.</H2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...</p>
+                    <button onclick="toggleModal()" class="card-button no-focus">Continue Reading</button>
+                </div>
+            </div>
+
+            <div class="card-container flex">
+                <div class="card"><img src="img/Layer_4.jpg" alt=""></div>
+                <div class="card flex column space-between">
+                    <H2 class="card-title">Duis aute irure dolor in
+                        henderit in voluptate.</H2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur...</p>
+                    <button onclick="toggleModal()" class="card-button no-focus">Continue Reading</button>
+                </div>
+            </div>
+
+            <div class="scroll flex space-between">
+                <button class="scroll-btn no-focus">⬅ Previous</button>
+                <button class="scroll-btn no-focus">Next ➡</button>
+            </div>
+    </div>
+    </main>
+
+    <footer class="flex justify-center">
+        <div class="footer-container flex column align-center">
+
+            <img class="footer-logo" src="img/Blogin-footer.png" alt="Blogin">
+            <p class="footernote">&copy 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+                <span>Pixelhint.com</span></p>
+            <div class="flex space-between">
+                <div class="soc-icons facebook"><i class="fa fa-facebook-f"></i></div>
+                <div class="soc-icons twitter"><i class="fa fa-twitter"></i></div>
+                <div class="soc-icons behance"><i class="fa fa-behance"></i></div>
+                <div class="soc-icons dribble"><i class="fa fa-dribbble"></i></div>
+            </div>
+        </div>
+    </footer>
 
     </div>
-    
+
     <script>
         function toggleMenu() {
             document.body.classList.toggle('menu-open')
+        }
+        function toggleModal() {
+            document.querySelector('.read-more-modal').classList.toggle('read-more-visible');
+        }
+        function toggleDropDown(){
+            document.querySelector('.dropdown').classList.toggle('mobile-dropdown')
         }
     </script>
 </body>
